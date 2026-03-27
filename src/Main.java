@@ -13,43 +13,46 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         LaundryService service = new LaundryService();
         ArrayList<Order> orders = new ArrayList<>();
+
+        // 🔹 Load previous data from file
         try {
-               BufferedReader br = new BufferedReader(new FileReader("data/orders.txt"));
-               String line;
+            BufferedReader br = new BufferedReader(new FileReader("data/orders.txt"));
+            String line;
 
-               while ((line = br.readLine()) != null) {
-                     String[] parts = line.split(",");
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
 
-                     int id = Integer.parseInt(parts[0]);
-                     String name = parts[1];
-                     String service = parts[2];
-                     int qty = Integer.parseInt(parts[3]);
-                     double price = Double.parseDouble(parts[4]);
-                     String status = parts[5];
+                int id = Integer.parseInt(parts[0]);
+                String name = parts[1];
+                String serviceType = parts[2];
+                int qty = Integer.parseInt(parts[3]);
+                double price = Double.parseDouble(parts[4]);
+                String status = parts[5];
 
-                     Order order = new Order(id, name, service, qty, price);
-                     order.status = status;
+                Order order = new Order(id, name, serviceType, qty, price);
+                order.status = status;
 
-                     orders.add(order);
+                orders.add(order);
 
-        // Update counter to avoid duplicate IDs
-                    if (id >= orderCounter) {
+                // Update counter
+                if (id >= orderCounter) {
                     orderCounter = id + 1;
-                    }
-               }
+                }
+            }
 
-              br.close();
+            br.close();
         } catch (Exception e) {
-              System.out.println("No previous data found.");
-          }
+            System.out.println("No previous data found.");
+        }
 
         System.out.println("=== Smart Laundry Management System ===");
 
         while (true) {
-           System.out.println("\n1. Place Order");
-           System.out.println("2. View Orders");
-           System.out.println("3. Update Order Status");
-           System.out.println("4. Exit");
+            System.out.println("\n1. Place Order");
+            System.out.println("2. View Orders");
+            System.out.println("3. Update Order Status");
+            System.out.println("4. Exit");
+            System.out.print("Choose option: ");
 
             int choice = sc.nextInt();
 
@@ -69,12 +72,14 @@ public class Main {
 
                 Order order = new Order(orderCounter++, name, serviceType, qty, price);
                 orders.add(order);
+
+                // 🔹 Save to file
                 try {
-                      FileWriter fw = new FileWriter("data/orders.txt", true);
-                      fw.write(order.toFileString() + "\n");
-                      fw.close();
+                    FileWriter fw = new FileWriter("data/orders.txt", true);
+                    fw.write(order.toFileString() + "\n");
+                    fw.close();
                 } catch (IOException e) {
-                      System.out.println("Error saving order!");
+                    System.out.println("Error saving order!");
                 }
 
                 System.out.println("Order placed successfully!");
@@ -89,33 +94,48 @@ public class Main {
                 }
 
             } else if (choice == 3) {
-                   System.out.print("Enter Order ID to update: ");
-                   int id = sc.nextInt();
-                   sc.nextLine();
+                System.out.print("Enter Order ID to update: ");
+                int id = sc.nextInt();
+                sc.nextLine();
 
-                   boolean found = false;
+                boolean found = false;
 
-                  for (Order o : orders) {
-                         if (o.orderId == id) {
-                         System.out.print("Enter new status (Pending/Washing/Completed): ");
-                         String newStatus = sc.nextLine();
+                for (Order o : orders) {
+                    if (o.orderId == id) {
+                        System.out.print("Enter new status (Pending/Washing/Completed): ");
+                        String newStatus = sc.nextLine();
 
-                         o.status = newStatus;
-                         System.out.println("Order status updated!");
-                         found = true;
-                         break;
-                        }
-                  }}else if (choice == 4) {
-                         System.out.println("Thank you!");
-                         break;
-                   }
-
-                   if (!found) {
-                         System.out.println("Order not found!");
-                   }else {
-                        System.out.println("Invalid choice!");
+                        o.status = newStatus;
+                        System.out.println("Order status updated!");
+                        found = true;
+                        break;
                     }
-                
+                }
+
+                if (!found) {
+                    System.out.println("Order not found!");
+                } else {
+                    // 🔹 Rewrite file with updated data
+                    try {
+                        FileWriter fw = new FileWriter("data/orders.txt");
+
+                        for (Order o : orders) {
+                            fw.write(o.toFileString() + "\n");
+                        }
+
+                        fw.close();
+                    } catch (IOException e) {
+                        System.out.println("Error updating file!");
+                    }
+                }
+
+            } else if (choice == 4) {
+                System.out.println("Thank you!");
+                break;
+
+            } else {
+                System.out.println("Invalid choice!");
+            }
         }
 
         sc.close();
