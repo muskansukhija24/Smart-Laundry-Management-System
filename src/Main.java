@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Main {
 
@@ -11,6 +13,35 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         LaundryService service = new LaundryService();
         ArrayList<Order> orders = new ArrayList<>();
+        try {
+               BufferedReader br = new BufferedReader(new FileReader("data/orders.txt"));
+               String line;
+
+               while ((line = br.readLine()) != null) {
+                     String[] parts = line.split(",");
+
+                     int id = Integer.parseInt(parts[0]);
+                     String name = parts[1];
+                     String service = parts[2];
+                     int qty = Integer.parseInt(parts[3]);
+                     double price = Double.parseDouble(parts[4]);
+                     String status = parts[5];
+
+                     Order order = new Order(id, name, service, qty, price);
+                     order.status = status;
+
+                     orders.add(order);
+
+        // Update counter to avoid duplicate IDs
+                    if (id >= orderCounter) {
+                    orderCounter = id + 1;
+                    }
+               }
+
+              br.close();
+        } catch (Exception e) {
+              System.out.println("No previous data found.");
+          }
 
         System.out.println("=== Smart Laundry Management System ===");
 
