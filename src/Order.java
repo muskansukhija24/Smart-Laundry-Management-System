@@ -23,4 +23,8 @@ public class Order {
         System.out.println("Price: " + price);
         System.out.println("Status: " + status);
     }
+
+    public String toFileString() {
+    return orderId + "," + userName + "," + serviceType + "," + quantity + "," + price + "," + status;
+}
 }
