@@ -13,10 +13,10 @@ public class Main {
         System.out.println("=== Smart Laundry Management System ===");
 
         while (true) {
-            System.out.println("\n1. Place Order");
-            System.out.println("2. View Orders");
-            System.out.println("3. Exit");
-            System.out.print("Choose option: ");
+           System.out.println("\n1. Place Order");
+           System.out.println("2. View Orders");
+           System.out.println("3. Update Order Status");
+           System.out.println("4. Exit");
 
             int choice = sc.nextInt();
 
@@ -49,11 +49,29 @@ public class Main {
                 }
 
             } else if (choice == 3) {
-                System.out.println("Thank you!");
-                break;
-            } else {
-                System.out.println("Invalid choice!");
-            }
+                   System.out.print("Enter Order ID to update: ");
+                   int id = sc.nextInt();
+                   sc.nextLine();
+
+                   boolean found = false;
+
+                  for (Order o : orders) {
+                         if (o.orderId == id) {
+                         System.out.print("Enter new status (Pending/Washing/Completed): ");
+                         String newStatus = sc.nextLine();
+
+                         o.status = newStatus;
+                         System.out.println("Order status updated!");
+                         found = true;
+                         break;
+                        }
+                  }
+
+                   if (!found) {
+                         System.out.println("Order not found!");
+                   }else {
+                         System.out.println("Invalid choice!");
+                }
         }
 
         sc.close();
