@@ -105,13 +105,17 @@ public class Main {
                          found = true;
                          break;
                         }
-                  }
+                  }}else if (choice == 4) {
+                         System.out.println("Thank you!");
+                         break;
+                   }
 
                    if (!found) {
                          System.out.println("Order not found!");
                    }else {
-                         System.out.println("Invalid choice!");
-                }
+                        System.out.println("Invalid choice!");
+                    }
+                
         }
 
         sc.close();
