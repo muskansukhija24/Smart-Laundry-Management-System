@@ -1,4 +1,6 @@
 import java.util.*;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
 
@@ -36,6 +38,13 @@ public class Main {
 
                 Order order = new Order(orderCounter++, name, serviceType, qty, price);
                 orders.add(order);
+                try {
+                      FileWriter fw = new FileWriter("data/orders.txt", true);
+                      fw.write(order.toFileString() + "\n");
+                      fw.close();
+                } catch (IOException e) {
+                      System.out.println("Error saving order!");
+                }
 
                 System.out.println("Order placed successfully!");
 
