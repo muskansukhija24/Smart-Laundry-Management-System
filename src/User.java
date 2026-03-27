@@ -1,5 +1,9 @@
-class User {
+public class User {
     int userId;
     String name;
-    String phone;
+
+    public User(int userId, String name) {
+        this.userId = userId;
+        this.name = name;
+    }
 }
