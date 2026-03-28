@@ -16,8 +16,12 @@ public double calculatePrice(String serviceType, String clothType, int quantity)
             rate = 5;
         }
 
-    } else {
-        System.out.println("Invalid service type!");
+    } else if (serviceType.equalsIgnoreCase("wash+iron")) {
+        if (clothType.equalsIgnoreCase("woolen")) {
+            rate = 20;
+        } else {
+            rate = 15;
+        }
     }
 
     return rate * quantity;
