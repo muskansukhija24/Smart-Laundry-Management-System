@@ -25,9 +25,11 @@ public class Main {
                 int id = Integer.parseInt(parts[0]);
                 String name = parts[1];
                 String serviceType = parts[2];
-                int qty = Integer.parseInt(parts[3]);
-                double price = Double.parseDouble(parts[4]);
-                String status = parts[5];
+                String clothType = parts[3];   // ✅ NEW
+                int qty = Integer.parseInt(parts[4]);
+                double price = Double.parseDouble(parts[5]);
+                String status = parts[6];
+
 
                 Order order = new Order(id, name, serviceType, qty, price);
                 order.status = status;
