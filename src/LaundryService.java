@@ -1,25 +1,28 @@
-public double calculatePrice(String serviceType, String clothType, int quantity) {
+public class LaundryService {
 
-    double rate = 0;
+    public double calculatePrice(String serviceType, String clothType, int quantity) {
 
-    if (serviceType.equalsIgnoreCase("wash")) {
+        double rate = 0;
 
-        if (clothType.equalsIgnoreCase("woolen")) rate = 15;
-        else rate = 10;
+        if (serviceType.equalsIgnoreCase("wash")) {
 
-    } else if (serviceType.equalsIgnoreCase("iron")) {
+            if (clothType.equalsIgnoreCase("woolen")) rate = 15;
+            else rate = 10;
 
-        if (clothType.equalsIgnoreCase("woolen")) rate = 8;
-        else rate = 5;
+        } else if (serviceType.equalsIgnoreCase("iron")) {
 
-    } else if (serviceType.equalsIgnoreCase("wash+iron")) {
+            if (clothType.equalsIgnoreCase("woolen")) rate = 8;
+            else rate = 5;
 
-        if (clothType.equalsIgnoreCase("woolen")) rate = 20;
-        else rate = 15;
+        } else if (serviceType.equalsIgnoreCase("wash+iron")) {
 
-    } else {
-        System.out.println("Invalid service!");
+            if (clothType.equalsIgnoreCase("woolen")) rate = 20;
+            else rate = 15;
+
+        } else {
+            System.out.println("Invalid service!");
+        }
+
+        return rate * quantity;
     }
-
-    return rate * quantity;
 }
