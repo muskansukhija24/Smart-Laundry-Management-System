@@ -31,7 +31,7 @@ public class Main {
                 String status = parts[6];
 
 
-                Order order = new Order(id, name, serviceType, qty, price);
+                Order order = new Order(id, name, serviceType, clothType, qty, price);
                 order.status = status;
 
                 orders.add(order);
@@ -64,7 +64,7 @@ public class Main {
                 System.out.print("Enter your name: ");
                 String name = sc.nextLine();
 
-                System.out.print("Enter service (wash/iron): ");
+                System.ou.print("Enter service (wash/iron/wash+iron):"):
                 String serviceType = sc.nextLine();
 
                 System.out.print("Enter cloth type (normal/woolen): ");
@@ -74,8 +74,12 @@ public class Main {
                 int qty = sc.nextInt();
 
                 double price = service.calculatePrice(serviceType, clothType, qty);
+                if (price == 0) {
+                      System.out.println("Order not placed due to invalid service!");
+                      continue;
+                  }
 
-                Order order = new Order(orderCounter++, name, serviceType, qty, price);
+                Order order = new Order(orderCounter++, name, serviceType, clothType, qty, price);
                 orders.add(order);
 
                 // 🔹 Save to file
