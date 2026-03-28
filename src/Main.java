@@ -65,10 +65,13 @@ public class Main {
                 System.out.print("Enter service (wash/iron): ");
                 String serviceType = sc.nextLine();
 
+                System.out.print("Enter cloth type (normal/woolen): ");
+                String clothType = sc.nextLine();
+
                 System.out.print("Enter quantity: ");
                 int qty = sc.nextInt();
 
-                double price = service.calculatePrice(serviceType, qty);
+                double price = service.calculatePrice(serviceType, clothType, qty);
 
                 Order order = new Order(orderCounter++, name, serviceType, qty, price);
                 orders.add(order);
