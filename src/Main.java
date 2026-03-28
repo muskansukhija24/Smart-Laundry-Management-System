@@ -64,7 +64,7 @@ public class Main {
                 System.out.print("Enter your name: ");
                 String name = sc.nextLine();
 
-                System.ou.print("Enter service (wash/iron/wash+iron):"):
+                System.out.print("Enter service (wash/iron/wash+iron):");
                 String serviceType = sc.nextLine();
 
                 System.out.print("Enter cloth type (normal/woolen): ");
