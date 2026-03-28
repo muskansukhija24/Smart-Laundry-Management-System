@@ -16,7 +16,7 @@ public class Main {
 
         // 🔹 Load previous data from file
         try {
-            BufferedReader br = new BufferedReader(new FileReader("data/orders.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("../data/orders.txt"));
             String line;
 
             while ((line = br.readLine()) != null) {
@@ -80,7 +80,7 @@ public class Main {
 
                 // 🔹 Save to file
                 try {
-                    FileWriter fw = new FileWriter("data/orders.txt", true);
+                    FileWriter fw = new FileWriter("../data/orders.txt", true);
                     fw.write(order.toFileString() + "\n");
                     fw.close();
                 } catch (IOException e) {
@@ -122,7 +122,7 @@ public class Main {
                 } else {
                     // 🔹 Rewrite file with updated data
                     try {
-                        FileWriter fw = new FileWriter("data/orders.txt");
+                        FileWriter fw = new FileWriter("../data/orders.txt");
 
                         for (Order o : orders) {
                             fw.write(o.toFileString() + "\n");
