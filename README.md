@@ -81,4 +81,145 @@ The system follows a simple modular architecture:
 
 ---
 
-## 🧩 Project Structure
+## 📂 Project Structure
+
+```
+Smart-Laundry-Management-System/
+│
+├── src/
+│   ├── Main.java
+│   ├── Order.java
+│   ├── LaundryService.java
+│   ├── User.java
+│   └── Payment.java
+│
+├── data/
+│   └── orders.txt
+│
+├── README.md
+├── Project_Report.pdf
+└── .gitignore
+```
+
+
+## ⚙️ How It Works
+
+1. The system starts and loads existing orders from the file  
+2. A menu is displayed to the user  
+3. User selects an option:
+   - Place Order  
+   - View Orders  
+   - Update Status  
+4. System processes the request  
+5. Data is saved back to file  
+6. Program continues until user exits  
+
+---
+
+## 💰 Pricing Mechanism
+
+The pricing is calculated dynamically based on:
+
+- Service Type  
+- Cloth Type  
+
+### 📊 Pricing Table:
+
+| Service       | Normal | Woolen |
+|--------------|--------|--------|
+| Wash         | ₹10    | ₹15    |
+| Iron         | ₹5     | ₹8     |
+| Wash + Iron  | ₹15    | ₹20    |
+
+### 🧠 Logic Explanation:
+
+- Woolen clothes require more care → higher price  
+- Combined service (wash + iron) → discounted compared to separate services  
+
+---
+
+## 📸 Sample Output
+
+```
+=== Smart Laundry Management System ===
+
+1. Place Order
+2. View Orders
+3. Update Order Status
+4. Exit
+
+Choose option: 1
+
+Enter your name: Muskan
+Enter service (wash/iron/wash+iron): wash
+Enter cloth type (normal/woolen): normal
+Enter quantity: 3
+
+Order placed successfully!
+```
+
+## 🧪 Testing
+
+The system was tested under different scenarios:
+
+- ✔ Valid inputs  
+- ✔ Invalid service types  
+- ✔ Multiple orders  
+- ✔ File read/write operations  
+
+All test cases were executed successfully.
+
+---
+
+## ⚠️ Limitations
+
+- Console-based interface (no GUI)  
+- No database integration  
+- No authentication system  
+- Limited scalability  
+
+---
+
+## 🔮 Future Enhancements
+
+- GUI using Java Swing or JavaFX  
+- Database integration (MySQL)  
+- Online payment system  
+- Mobile application  
+- SMS/Email notifications  
+- Multi-user login system  
+
+---
+
+## 👤 User Roles
+
+### 👤 User:
+- Place order  
+- View order  
+
+### 🧑‍💼 Admin:
+- Update order status  
+
+---
+
+## 📚 Concepts Used
+
+- Object-Oriented Programming (OOP)  
+- Classes and Objects  
+- File Handling  
+- Exception Handling  
+- Conditional Logic  
+
+---
+
+## 👨‍💻 Author
+
+**Name:** Muskan Sukhija 
+**Registration Number:** 24BAI10927
+**Project:** Smart Laundry Management System  
+
+---
+
+## 📄 License
+
+This project is created for academic purposes only.
