@@ -1,11 +1,11 @@
-# 🧺 Smart Laundry Management System
+#  Smart Laundry Management System
 
 ![Java](https://img.shields.io/badge/Language-Java-blue)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Console-lightgrey)
 ![License](https://img.shields.io/badge/License-Educational-orange)
 
-## 📌 Introduction
+##  Introduction
 
 The **Smart Laundry Management System** is a Java-based console application designed to simplify and automate laundry operations in small-scale environments such as hostels and apartment complexes.
 
@@ -13,20 +13,20 @@ Traditional laundry systems rely on manual record-keeping, which is inefficient 
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 In many hostels and apartment complexes, laundry services are managed manually using registers or informal methods. This leads to:
 
-- ❌ Mismanagement of clothes  
-- ❌ Difficulty in tracking order status  
-- ❌ Data loss and human errors  
-- ❌ Inefficient handling of multiple orders  
+-  Mismanagement of clothes  
+-  Difficulty in tracking order status  
+-  Data loss and human errors  
+-  Inefficient handling of multiple orders  
 
 This project solves these issues by providing a structured and automated system.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - To automate the laundry management process  
 - To provide a user-friendly interface for placing orders  
@@ -37,7 +37,7 @@ This project solves these issues by providing a structured and automated system.
 
 ---
 
-## 🧠 System Overview
+##  System Overview
 
 This system allows users to:
 
@@ -50,25 +50,25 @@ It uses file handling to store data permanently, ensuring that orders are not lo
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📦 Place new laundry orders  
-- 👀 View all orders  
-- 🔄 Update order status (Pending → Washing → Completed)  
-- 🧾 Dynamic pricing system  
-- 🧵 Supports multiple services:
+-  Place new laundry orders  
+-  View all orders  
+-  Update order status (Pending → Washing → Completed)  
+-  Dynamic pricing system  
+-  Supports multiple services:
   - Wash  
   - Iron  
   - Wash + Iron  
-- 👕 Supports cloth types:
+-  Supports cloth types:
   - Normal  
   - Woolen  
-- 💾 File-based persistent storage  
-- 🔁 Auto-loads previous data on restart  
+-  File-based persistent storage  
+-  Auto-loads previous data on restart  
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The system follows a simple modular architecture:
 
@@ -86,7 +86,7 @@ The system follows a simple modular architecture:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Smart-Laundry-Management-System/
@@ -107,7 +107,7 @@ Smart-Laundry-Management-System/
 ```
 
 
-## ⚙️ How It Works
+##  How It Works
 
 1. The system starts and loads existing orders from the file  
 2. A menu is displayed to the user  
@@ -121,14 +121,14 @@ Smart-Laundry-Management-System/
 
 ---
 
-## 💰 Pricing Mechanism
+##  Pricing Mechanism
 
 The pricing is calculated dynamically based on:
 
 - Service Type  
 - Cloth Type  
 
-### 📊 Pricing Table:
+###  Pricing Table:
 
 | Service       | Normal | Woolen |
 |--------------|--------|--------|
@@ -136,14 +136,14 @@ The pricing is calculated dynamically based on:
 | Iron         | ₹5     | ₹8     |
 | Wash + Iron  | ₹15    | ₹20    |
 
-### 🧠 Logic Explanation:
+###  Logic Explanation:
 
 - Woolen clothes require more care → higher price  
 - Combined service (wash + iron) → discounted compared to separate services  
 
 ---
 
-## 📸 Sample Output
+##  Sample Output
 
 ```
 === Smart Laundry Management System ===
@@ -162,7 +162,7 @@ Enter quantity: 3
 
 Order placed successfully!
 ```
-## ✨ Highlights
+##  Highlights
 
 - Simple and user-friendly system  
 - Designed for hostels and apartments  
@@ -170,7 +170,7 @@ Order placed successfully!
 - File-based persistent storage  
 - Easy to extend in future
   
-## 🧪 Testing
+##  Testing
 
 The system was tested under different scenarios:
 
@@ -183,7 +183,7 @@ All test cases were executed successfully.
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 - Console-based interface (no GUI)  
 - No database integration  
@@ -192,7 +192,7 @@ All test cases were executed successfully.
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - GUI using Java Swing or JavaFX  
 - Database integration (MySQL)  
@@ -203,18 +203,18 @@ All test cases were executed successfully.
 
 ---
 
-## 👤 User Roles
+##  User Roles
 
-### 👤 User:
+###  User:
 - Place order  
 - View order  
 
-### 🧑‍💼 Admin:
+###  Admin:
 - Update order status  
 
 ---
 
-## 📚 Concepts Used
+##  Concepts Used
 
 - Object-Oriented Programming (OOP)  
 - Classes and Objects  
@@ -224,7 +224,7 @@ All test cases were executed successfully.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Name:** Muskan Sukhija 
 **Registration Number:** 24BAI10927
