@@ -107,23 +107,15 @@ Smart-Laundry-Management-System/
 ```
 ##  How to Run the Project
 
-Follow these steps to run the Smart Laundry Management System:
+### Using Any Java IDE (Recommended)
 
-###  Using GitHub Codespaces
-
-1. Open the repository in GitHub Codespaces  
-2. Open the terminal  
-
-3. Navigate to the `src` folder:
-```
-cd src
-```
-
-4. Compile all Java files:
+1. Download or clone the repository  
+2. Open the project in any Java IDE (VS Code / IntelliJ / Eclipse)  
+3. Navigate to the `src` folder  
+4. Compile the files:
 ```
 javac *.java
 ```
-
 5. Run the program:
 ```
 java Main
@@ -131,7 +123,25 @@ java Main
 
 ---
 
-### 🔹 Important Notes
+### 🔹 Using GitHub Codespaces (Optional)
+
+1. Open repository in Codespaces  
+2. Open terminal  
+3. Run:
+
+```
+cd src
+javac *.java
+java Main
+```
+
+---
+
+###  Requirements
+
+- Java JDK (8 or above)  
+
+###  Important Notes
 
 - Ensure the `data/orders.txt` file exists  
 - File path used in code:
