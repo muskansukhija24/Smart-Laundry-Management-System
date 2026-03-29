@@ -1,5 +1,10 @@
 # 🧺 Smart Laundry Management System
 
+![Java](https://img.shields.io/badge/Language-Java-blue)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-Console-lightgrey)
+![License](https://img.shields.io/badge/License-Educational-orange)
+
 ## 📌 Introduction
 
 The **Smart Laundry Management System** is a Java-based console application designed to simplify and automate laundry operations in small-scale environments such as hostels and apartment complexes.
@@ -157,7 +162,14 @@ Enter quantity: 3
 
 Order placed successfully!
 ```
+## ✨ Highlights
 
+- Simple and user-friendly system  
+- Designed for hostels and apartments  
+- Dynamic pricing model  
+- File-based persistent storage  
+- Easy to extend in future
+  
 ## 🧪 Testing
 
 The system was tested under different scenarios:
