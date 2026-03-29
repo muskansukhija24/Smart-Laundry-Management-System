@@ -92,6 +92,14 @@ The system follows a simple modular architecture:
 - Stores and retrieves order data  
 
 ---
+##  Technologies Used
+
+- **Java (Core Java)** – Main programming language used to build the application  
+- **Object-Oriented Programming (OOP)** – Used concepts like classes, objects, encapsulation  
+- **File Handling (Java IO)** – For storing and retrieving order data (`FileReader`, `FileWriter`, `BufferedReader`)  
+- **Git & GitHub** – Version control and project hosting  
+- **GitHub Codespaces** – Development and execution environment  
+- **Console (CLI)** – User interface for interaction  
 
 ##  Project Structure
 
