@@ -123,7 +123,7 @@ java Main
 
 ---
 
-### 🔹 Using GitHub Codespaces (Optional)
+###  Using GitHub Codespaces (Optional)
 
 1. Open repository in Codespaces  
 2. Open terminal  
