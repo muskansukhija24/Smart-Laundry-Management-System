@@ -174,10 +174,10 @@ Order placed successfully!
 
 The system was tested under different scenarios:
 
-- ✔ Valid inputs  
-- ✔ Invalid service types  
-- ✔ Multiple orders  
-- ✔ File read/write operations  
+-  Valid inputs  
+-  Invalid service types  
+-  Multiple orders  
+-  File read/write operations  
 
 All test cases were executed successfully.
 
