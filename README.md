@@ -101,6 +101,20 @@ Smart-Laundry-Management-System/
 ├── data/
 │   └── orders.txt
 │
+├── Docs/
+│   ├── Diagrams/
+│   │   ├── Class_Diagram.png
+│   │   ├── Flowchart.png
+│   │   └── Use_Case_Diagram.png
+│   │
+│   └── Screenshots/
+│       ├── Menu.png
+│       ├── Placing_Orders.png
+│       ├── Viewing_Orders.png
+│       ├── Updating_Status.png
+│       ├── Orders.txt.png
+│       └── Exit.png
+│
 ├── README.md
 ├── Project_Report.pdf
 └── .gitignore
