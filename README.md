@@ -227,14 +227,6 @@ The system was tested under different scenarios:
 
 All test cases were executed successfully.
 
----
-
-##  Limitations
-
-- Console-based interface (no GUI)  
-- No database integration  
-- No authentication system  
-- Limited scalability  
 
 ---
 
