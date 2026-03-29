@@ -5,6 +5,13 @@
 ![Platform](https://img.shields.io/badge/Platform-Console-lightgrey)
 ![License](https://img.shields.io/badge/License-Educational-orange)
 
+##  Student Details 
+
+- **Name:** Muskan Sukhija 
+- **Registration Number:** 24BAI10927
+- **Project:** Smart Laundry Management System  
+
+
 ##  Introduction
 
 The **Smart Laundry Management System** is a Java-based console application designed to simplify and automate laundry operations in small-scale environments such as hostels and apartment complexes.
@@ -276,13 +283,6 @@ All test cases were executed successfully.
 
 ---
 
-##  Author
-
-- **Name:** Muskan Sukhija 
-- **Registration Number:** 24BAI10927
-- **Project:** Smart Laundry Management System  
-
----
 
 ## 📄 License
 
