@@ -226,9 +226,9 @@ All test cases were executed successfully.
 
 ##  Author
 
-**Name:** Muskan Sukhija 
-**Registration Number:** 24BAI10927
-**Project:** Smart Laundry Management System  
+- **Name:** Muskan Sukhija 
+- **Registration Number:** 24BAI10927
+- **Project:** Smart Laundry Management System  
 
 ---
 
